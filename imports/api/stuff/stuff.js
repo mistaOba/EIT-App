@@ -6,12 +6,14 @@ import { Meteor } from 'meteor/meteor';
 
 export const Stuff = new Mongo.Collection('Stuff');
 
-//Define Bulk Delete Method
+// Define Bulk Delete Method
 Meteor.methods({
+  // eslint-disable-next-line consistent-return
   'eits.bulk_delete'(ids) {
-    if (!Meteor.user()){
+    if (!Meteor.user()) {
       return new Meteor.Error('Not Authorised');
     }
+    // eslint-disable-next-line no-undef
     check(ids, Array);
     Stuff.remove({ _id: { $in: ids } });
   },

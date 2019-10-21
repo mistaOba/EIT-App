@@ -17,27 +17,28 @@ Template.List_Stuff_Page.onCreated(function bodyOnCreated() {
 });
 
 Template.List_Stuff_Page.events({
-  'click #deleteButton': function (event) {
+  'click #deleteButton': function () {
     Stuff.remove(this._id);
   },
 
-'change .eitCheck': function (event, instance) {
-  event.preventDefault();
+  'change .eitCheck': function (event, instance) {
+    event.preventDefault();
 
-  if (event.target.checked) {
-    const oldEitIds = instance.checkedEITs.get();
-    instance.checkedEITs.set([...oldEitIds, this._id]);
-  } else {
-    const oldEitIds = instance.checkedEITs.get();
-    instance.checkedEITs.set(oldEitIds.filter(each => each !== this._id));
-  }
+    if (event.target.checked) {
+      const oldEitIds = instance.checkedEITs.get();
+      instance.checkedEITs.set([...oldEitIds, this._id]);
+    } else {
+      const oldEitIds = instance.checkedEITs.get();
+      instance.checkedEITs.set(oldEitIds.filter(each => each !== this._id));
+    }
   // console.log(instance.checkedEITs.get());
-},
+  },
 
-'click #deleteSelectedButton': function (event, instance) {
-  event.preventDefault();
+  'click #deleteSelectedButton': function (event, instance) {
+    event.preventDefault();
   // Stuff.remove({ _id: { $in: instance.checkedEITs.get() } }); didn't work cos of some authentication ish
-  Meteor.call('eits.bulk_delete', instance.checkedEITs.get());
-},
+    // eslint-disable-next-line no-undef
+    Meteor.call('eits.bulk_delete', instance.checkedEITs.get());
+  },
 
 });
