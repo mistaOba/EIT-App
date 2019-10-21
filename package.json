@@ -1,6 +1,6 @@
 {
   "name": "main.js",
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "meteor --no-release-check --settings ../config/settings.development.json",
     "lint": "eslint --quiet ./imports"
