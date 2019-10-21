@@ -1,0 +1,36 @@
+<template name="List_Stuff_Page">
+  {{#If_Logged_In}}
+    <div class="ui text container">
+      {{#if Template.subscriptionsReady}}
+        <table style="margin-top: 20px" class="ui celled table">
+          <thead>
+          <tr>
+            <th></th>
+            <th>Full Name</th>
+            <th>Country</th>
+            <th>Age</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          {{#each stuffList}}
+            <tr>
+              <td><input type="checkbox" class="eitCheck"/></td>
+              <td>{{name}}</td>
+              <td>{{country}}</td>
+              <td>{{age}}</td>
+              <td><a href="{{pathFor 'Edit_Stuff_Page' _id=_id}}">Edit</a></td>
+              <td><button data-id="{{_id}}" class="ui red basic button" id="deleteButton">Delete</button></td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+        <button data-id="{{_id}}" class="ui red basic button" id="deleteSelectedButton">Delete Selected</button>
+      {{else}}
+        {{> Loading}}
+      {{/if}}
+    </div>
+  {{/If_Logged_In}}
+</template>

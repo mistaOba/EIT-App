@@ -1,0 +1,6 @@
+head {
+  background-color: #2EBEBE;
+}
+body {
+  padding-top: 81px;  /* Move body of page below navbar. */
+}
