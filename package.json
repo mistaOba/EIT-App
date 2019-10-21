@@ -1,5 +1,5 @@
 {
-  "name": "EIT-STUDENT-APP",
+  "name": "eit-app",
   "private": false,
   "scripts": {
     "start": "meteor --no-release-check --settings ../config/settings.development.json",
