@@ -1,6 +1,6 @@
 {
-  "name": "meteor-application-template",
-  "private": true,
+  "name": "EIT-STUDENT-APP",
+  "private": false,
   "scripts": {
     "start": "meteor --no-release-check --settings ../config/settings.development.json",
     "lint": "eslint --quiet ./imports"
