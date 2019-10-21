@@ -1,5 +1,5 @@
 {
-  "name": "eit-app",
+  "name": "main.js",
   "private": true,
   "scripts": {
     "start": "meteor --no-release-check --settings ../config/settings.development.json",
