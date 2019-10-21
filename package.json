@@ -2,7 +2,7 @@
   "name": "eit-app",
   "private": true,
   "scripts": {
-    "start": "meteor --no-release-check --settings ../config/settings.development.json",
+    "start": "meteor",
     "lint": "eslint --quiet ./imports"
   },
   "dependencies": {
