@@ -1,8 +1,8 @@
 {
-  "name": "main.js",
-  "private": false,
+  "name": "eit-app",
+  "private": true,
   "scripts": {
-    "start": "meteor --no-release-check --settings ../config/settings.development.json",
+    "start": "meteor run",
     "lint": "eslint --quiet ./imports"
   },
   "dependencies": {
