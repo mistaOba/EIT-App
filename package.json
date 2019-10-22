@@ -2,7 +2,7 @@
   "name": "eit-app",
   "private": false,
   "scripts": {
-    "start": "meteor",
+    "start": "meteor run",
     "lint": "eslint --quiet ./imports"
   },
   "dependencies": {

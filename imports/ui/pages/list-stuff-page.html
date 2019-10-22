@@ -2,7 +2,7 @@
   {{#If_Logged_In}}
     <div class="ui text container">
       {{#if Template.subscriptionsReady}}
-        <table style="margin-top: 20px" class="ui celled table">
+        <table style="margin-top: 20px" class="ui celled olive table">
           <thead>
           <tr>
             <th></th>
@@ -23,6 +23,7 @@
               <td>{{age}}</td>
               <td><a href="{{pathFor 'Edit_Stuff_Page' _id=_id}}">Edit</a></td>
               <td><button data-id="{{_id}}" class="ui red basic button" id="deleteButton">Delete</button></td>
+              <td>{{currentUser._id}}</td>
             </tr>
             {{/each}}
           </tbody>
