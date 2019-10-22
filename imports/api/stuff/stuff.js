@@ -51,6 +51,14 @@ export const StuffSchema = new SimpleSchema({
       placeholder: 'Nigeria',
     },
   },
+  createdBy: {
+    type: 'String',
+    autoform: {
+      type: 'hidden',
+      label: false,
+    },
+    defaultValue: Meteor.userId,
+  },
 });
 
 Stuff.attachSchema(StuffSchema);
