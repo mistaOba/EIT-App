@@ -26,7 +26,7 @@ export const StuffSchema = new SimpleSchema({
   name: {
     label: 'Full Name',
     type: String,
-    optional: false,
+    optional: true,
     max: 30,
     autoform: {
       group: 'Stuff',
@@ -36,7 +36,7 @@ export const StuffSchema = new SimpleSchema({
   age: {
     label: 'Age',
     type: Number,
-    optional: false,
+    optional: true,
     autoform: {
       group: 'Stuff',
       placeholder: '23',
@@ -45,7 +45,7 @@ export const StuffSchema = new SimpleSchema({
   country: {
     label: 'Country',
     type: String,
-    optional: false,
+    optional: true,
     autoform: {
       group: 'Stuff',
       placeholder: 'Nigeria',
