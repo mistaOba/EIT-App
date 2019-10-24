@@ -6,8 +6,8 @@ import { Stuff } from '../../api/stuff/stuff.js';
  * @type {*[]}
  */
 const stuffSeeds = [
-  { name: 'Basket', quantity: 3 },
-  { name: 'Bicycle', quantity: 2 },
+  { name: 'Tony Stark', age: '32', country: 'Nigeria' },
+  { name: 'Robert Downey', age: '45', country: 'Ghana' },
 ];
 
 /**
