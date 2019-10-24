@@ -21,8 +21,10 @@
               <td>{{name}}</td>
               <td>{{country}}</td>
               <td>{{age}}</td>
-              <td>{{#if compare createdBy currentUser._id}}<a href="{{pathFor 'Edit_Stuff_Page' _id=_id}}">Edit</a>{{/if}}</td>
-              <td>{{#if compare createdBy currentUser._id}}<button data-id="{{_id}}" class="ui red basic button" id="deleteButton">Delete</button>{{/if}}</td>
+              {{#if compare createdBy currentUser._id}}  
+              <td><a href="{{pathFor 'Edit_Stuff_Page' _id=_id}}">Edit</a></td>
+              <td><button data-id="{{_id}}" class="ui red basic button" id="deleteButton">Delete</button></td>
+              {{/if}}
             </tr>
             {{/each}}
           </tbody>
